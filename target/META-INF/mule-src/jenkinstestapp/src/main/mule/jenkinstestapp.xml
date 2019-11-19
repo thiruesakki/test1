@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a51f1487-1c37-4d70-9713-f56c16ca092a" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="jenkinstestappFlow" doc:id="d78303f6-9994-4b0e-907a-e8108c04282f" >
+		<http:listener doc:name="Listener" doc:id="ab6635a9-fdd3-4e6a-8cf1-aeb64738d034" config-ref="HTTP_Listener_config" path="/jenkinsTest"/>
+		<set-payload value='{"status":"Success","message":"Sucessfully depolyed"}' doc:name="Set Payload" doc:id="474a1f3c-80f5-4f4e-aa10-1dd2a40ad5cc" />
+	</flow>
+</mule>

@@ -1,0 +1,13 @@
+http:
+ port: "8081"
+ path: "/systemapi"
+db:
+  host: "122.166.201.252"
+  port: "3306"
+  user: "root"
+  password: "Mysql@2018"
+  database: "partnerrebateportal1" 
+anypoint:
+  username: "kumariesakki1"
+  password: "Muthu26*"
+  environment: "SANDBOX"
